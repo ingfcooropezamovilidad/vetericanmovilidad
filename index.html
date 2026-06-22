@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Veterican Movilidad · Carritos ortopédicos para perros en Puebla</title>
+  <title>Veterican Movilidad · Carritos ortopédicos para perros</title>
   <meta name="description" content="Carritos ortopédicos personalizados para perros con problemas de movilidad. Fabricamos a la medida en Puebla y enviamos a toda la República Mexicana." />
   <meta name="keywords" content="carritos para perros, silla de ruedas para perros, ortopedia canina, movilidad canina" />
   <meta name="author" content="Veterican Movilidad" />
@@ -20,12 +20,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    /* ===== RESET Y BASE ===== */
+    /* ===== PALETA DE COLORES EXACTA DE TU LOGO ===== */
+    :root {
+      --azul-principal: #0F62F1;
+      --morado-logo: #E712EF;
+      --verde-salud: #D6F03D;
+      --rojo-detalle: #9F453D;
+      --negro-texto: #1D0F11;
+      --blanco-fondo: #EEEAF3;
+      --blanco-puro: #FFFFFF;
+      --whatsapp-color: #25D366;
+    }
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Inter', sans-serif;
-      background: #ffffff;
-      color: #1e2a1e;
+      background: var(--blanco-fondo);
+      color: var(--negro-texto);
       line-height: 1.6;
     }
     .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
@@ -35,7 +46,7 @@
       position: fixed;
       bottom: 30px;
       right: 30px;
-      background: #25D366;
+      background: var(--whatsapp-color);
       color: white;
       width: 64px;
       height: 64px;
@@ -54,13 +65,13 @@
 
     /* ===== HEADER FIJO ===== */
     header {
-      background: rgba(255, 255, 255, 0.92);
+      background: var(--blanco-puro);
       backdrop-filter: blur(6px);
       padding: 12px 0;
       position: sticky;
       top: 0;
       z-index: 100;
-      border-bottom: 1px solid #e0ebe0;
+      border-bottom: 3px solid var(--morado-logo);
     }
     .header-flex {
       display: flex;
@@ -69,22 +80,19 @@
       flex-wrap: wrap;
       gap: 15px;
     }
-    .logo-header {
-      max-height: 45px;
-      width: auto;
-    }
+    .logo-header { max-height: 45px; width: auto; }
     .nav-links a {
-      color: #1b4d3e;
+      color: var(--azul-principal);
       text-decoration: none;
       margin-left: 24px;
-      font-weight: 500;
+      font-weight: 600;
       font-size: 0.95rem;
       transition: color 0.2s;
       cursor: pointer;
     }
-    .nav-links a:hover { color: #2e7d5e; }
+    .nav-links a:hover { color: var(--morado-logo); }
     .nav-links .btn-whatsapp-nav {
-      background: #25D366;
+      background: var(--whatsapp-color);
       padding: 8px 20px;
       border-radius: 40px;
       color: white;
@@ -93,62 +101,64 @@
     }
     .nav-links .btn-whatsapp-nav:hover { background: #1ebe5a; color: white; }
 
-    /* ===== HERO PROFESIONAL CON PORTADA ===== */
+    /* ===== HERO CON FOTO DE PORTADA ===== */
     .hero {
       background: linear-gradient(rgba(0,0,0,0.30), rgba(0,0,0,0.30)),
                   url('https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/portada%20pagina%20web%20vetericanmovilidad%201.jpg') center center/cover no-repeat;
-      min-height: 85vh;
+      min-height: 55vh;
       display: flex;
       align-items: center;
-      text-align: center;
       color: white;
-      padding: 60px 20px;
-      border-bottom: 6px solid #a8d5ba;
+      padding: 40px 20px;
+      border-bottom: 6px solid var(--verde-salud);
     }
-    .hero-content { max-width: 800px; margin: 0 auto; }
+    .hero-content {
+      max-width: 650px;
+      text-align: left;
+      margin-left: 0;
+      margin-right: auto;
+    }
     .hero h1 {
-      font-size: 3.8rem;
+      font-size: 3.2rem;
       font-weight: 800;
       line-height: 1.1;
       letter-spacing: -1px;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
       text-shadow: 0 2px 10px rgba(0,0,0,0.3);
     }
-    .hero h1 .destacar { color: #a8d5ba; }
+    .hero h1 .destacar { color: var(--verde-salud); }
     .hero p {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       font-weight: 400;
       opacity: 0.95;
-      margin-bottom: 32px;
-      max-width: 650px;
-      margin-left: auto;
-      margin-right: auto;
+      margin-bottom: 24px;
+      max-width: 550px;
       text-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
     .hero .btn-hero {
       display: inline-block;
-      background: #25D366;
+      background: var(--morado-logo);
       color: white;
       font-weight: 700;
-      font-size: 1.2rem;
-      padding: 16px 50px;
+      font-size: 1.1rem;
+      padding: 14px 40px;
       border-radius: 60px;
       text-decoration: none;
-      box-shadow: 0 8px 30px rgba(37,211,102,0.4);
+      box-shadow: 0 8px 30px rgba(231, 18, 239, 0.4);
       transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
     }
     .hero .btn-hero:hover {
-      background: #1ebe5a;
+      background: #c010c4;
       transform: translateY(-3px);
-      box-shadow: 0 12px 40px rgba(37,211,102,0.5);
+      box-shadow: 0 12px 40px rgba(231, 18, 239, 0.5);
     }
     .hero .btn-hero i { margin-right: 10px; }
 
     /* ===== SECCIONES GENERALES ===== */
     section {
       padding: 60px 0;
-      border-bottom: 1px solid #e6f0e6;
-      background: white;
+      border-bottom: 1px solid #d6d0d9;
+      background: var(--blanco-fondo);
     }
     section:last-of-type { border-bottom: none; }
     h2 {
@@ -156,11 +166,16 @@
       font-weight: 700;
       text-align: center;
       margin-bottom: 36px;
-      color: #1b4d3e;
+      color: var(--azul-principal);
     }
-    h2 span { background: linear-gradient(135deg, #1b4d3e, #2e7d5e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    h2 span {
+      background: linear-gradient(135deg, var(--azul-principal), var(--morado-logo));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
 
-    /* ===== CARACTERÍSTICAS (6 iconos en 3 columnas) ===== */
+    /* ===== CARACTERÍSTICAS ===== */
     .caracteristicas-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -168,19 +183,19 @@
       text-align: center;
     }
     .caracteristica {
-      background: #f9fcf9;
+      background: var(--blanco-puro);
       padding: 24px 12px;
       border-radius: 20px;
       box-shadow: 0 4px 16px rgba(0,0,0,0.04);
-      border: 1px solid #e0ebe0;
+      border: 2px solid var(--morado-logo);
       transition: transform 0.2s;
     }
     .caracteristica:hover { transform: translateY(-4px); }
-    .caracteristica i { font-size: 2.8rem; color: #2e7d5e; margin-bottom: 10px; display: block; }
-    .caracteristica h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 4px; }
-    .caracteristica p { font-size: 0.95rem; color: #3a4a3a; }
+    .caracteristica i { font-size: 2.8rem; color: var(--azul-principal); margin-bottom: 10px; display: block; }
+    .caracteristica h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 4px; color: var(--negro-texto); }
+    .caracteristica p { font-size: 0.95rem; color: #333; }
 
-    /* ===== SERVICIOS (4 columnas) ===== */
+    /* ===== SERVICIOS ===== */
     .servicios-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -188,24 +203,24 @@
       text-align: center;
     }
     .servicio-card {
-      background: #f9fcf9;
+      background: var(--blanco-puro);
       padding: 28px 16px 24px;
       border-radius: 24px;
       box-shadow: 0 6px 24px rgba(0,0,0,0.04);
-      border: 1px solid #e0ebe0;
+      border: 2px solid var(--verde-salud);
       transition: box-shadow 0.25s, transform 0.2s;
     }
     .servicio-card:hover { box-shadow: 0 12px 32px rgba(0,0,0,0.07); transform: translateY(-4px); }
     .servicio-icon { font-size: 3.4rem; display: block; margin-bottom: 10px; }
-    .servicio-card h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 6px; }
-    .servicio-card p { color: #3a4a3a; font-size: 0.95rem; }
+    .servicio-card h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 6px; color: var(--azul-principal); }
+    .servicio-card p { color: #333; font-size: 0.95rem; }
 
-    /* ===== GALERÍA (oculta por defecto) ===== */
+    /* ===== GALERÍA (oculta) ===== */
     .galeria-section {
       display: none;
-      background: #f9fcf9;
+      background: var(--blanco-fondo);
       padding: 60px 0;
-      border-bottom: 1px solid #e6f0e6;
+      border-bottom: 1px solid #d6d0d9;
     }
     .galeria-section.visible {
       display: block;
@@ -228,18 +243,19 @@
       box-shadow: 0 4px 16px rgba(0,0,0,0.06);
       transition: transform 0.25s, box-shadow 0.25s;
       background: #e4f0e4;
-      border: 1px solid #d0e0d0;
+      border: 2px solid var(--morado-logo);
     }
     .galeria-grid img:hover { transform: scale(1.02); box-shadow: 0 10px 30px rgba(0,0,0,0.10); }
     .galeria-nota {
       text-align: center; margin-top: 24px; font-size: 0.95rem;
-      color: #3a4a3a; background: #e4f0e4; padding: 12px 20px;
+      color: #333; background: var(--blanco-puro); padding: 12px 20px;
       border-radius: 60px; display: inline-block; margin-left: auto; margin-right: auto; width: auto;
+      border: 2px solid var(--verde-salud);
     }
     .btn-cerrar-galeria {
       display: inline-block;
       margin-top: 20px;
-      background: #1b4d3e;
+      background: var(--azul-principal);
       color: white;
       padding: 10px 30px;
       border-radius: 40px;
@@ -248,9 +264,9 @@
       cursor: pointer;
       transition: background 0.2s;
     }
-    .btn-cerrar-galeria:hover { background: #2e7d5e; }
+    .btn-cerrar-galeria:hover { background: var(--morado-logo); }
 
-    /* ===== PASOS (5 columnas) ===== */
+    /* ===== PASOS ===== */
     .pasos {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
@@ -258,17 +274,17 @@
       text-align: center;
     }
     .paso {
-      background: #f9fcf9;
+      background: var(--blanco-puro);
       padding: 24px 12px;
       border-radius: 20px;
-      border: 1px solid #e0ebe0;
+      border: 2px solid var(--azul-principal);
       box-shadow: 0 4px 12px rgba(0,0,0,0.02);
       transition: transform 0.2s;
     }
     .paso:hover { transform: translateY(-3px); }
     .paso-num {
       display: inline-block;
-      background: #1b4d3e;
+      background: var(--morado-logo);
       color: white;
       font-weight: 700;
       width: 40px;
@@ -278,7 +294,7 @@
       font-size: 1.2rem;
       margin-bottom: 10px;
     }
-    .paso h4 { font-weight: 600; font-size: 1.05rem; }
+    .paso h4 { font-weight: 600; font-size: 1.05rem; color: var(--azul-principal); }
 
     /* ===== CONTACTO ===== */
     .contacto-info {
@@ -286,34 +302,34 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 30px 50px;
-      background: #f9fcf9;
+      background: var(--blanco-puro);
       padding: 32px 40px;
       border-radius: 32px;
       box-shadow: 0 6px 24px rgba(0,0,0,0.04);
-      border: 1px solid #e0ebe0;
+      border: 2px solid var(--morado-logo);
       max-width: 1000px;
       margin: 0 auto;
     }
     .contacto-item { display: flex; align-items: center; gap: 14px; font-size: 1.1rem; }
-    .contacto-item .icon { font-size: 2rem; color: #2e7d5e; }
-    .contacto-item a { color: #1b4d3e; text-decoration: none; font-weight: 500; }
-    .contacto-item a:hover { text-decoration: underline; }
+    .contacto-item .icon { font-size: 2rem; color: var(--azul-principal); }
+    .contacto-item a { color: var(--azul-principal); text-decoration: none; font-weight: 500; }
+    .contacto-item a:hover { text-decoration: underline; color: var(--morado-logo); }
 
     /* ===== FOOTER ===== */
     footer {
-      background: #1b4d3e;
-      color: rgba(255,255,255,0.8);
+      background: var(--azul-principal);
+      color: rgba(255,255,255,0.9);
       text-align: center;
       padding: 32px 20px;
-      border-top: 6px solid #a8d5ba;
+      border-top: 6px solid var(--verde-salud);
     }
     footer strong { color: white; }
     .social-links { display: flex; justify-content: center; gap: 24px; margin: 16px 0; }
-    .social-links a { color: rgba(255,255,255,0.8); font-size: 2rem; transition: color 0.2s, transform 0.2s; }
-    .social-links a:hover { color: #a8d5ba; transform: scale(1.1); }
+    .social-links a { color: rgba(255,255,255,0.9); font-size: 2rem; transition: color 0.2s, transform 0.2s; }
+    .social-links a:hover { color: var(--verde-salud); transform: scale(1.1); }
     .horario { margin-top: 12px; font-size: 0.95rem; }
-    .horario span { font-weight: 500; color: white; }
-    .footer-copy { margin-top: 12px; font-size: 0.9rem; opacity: 0.7; }
+    .horario span { font-weight: 500; color: var(--verde-salud); }
+    .footer-copy { margin-top: 12px; font-size: 0.9rem; opacity: 0.8; }
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 992px) {
@@ -324,16 +340,17 @@
     }
     @media (max-width: 768px) {
       .hero h1 { font-size: 2.4rem; }
-      .hero p { font-size: 1.1rem; }
-      .hero { min-height: 70vh; }
+      .hero p { font-size: 1rem; }
+      .hero { min-height: 45vh; }
       .nav-links a { margin-left: 12px; font-size: 0.85rem; }
       .nav-links .btn-whatsapp-nav { padding: 6px 14px; margin-left: 10px; }
       .header-flex { justify-content: center; }
       .logo-header { max-height: 40px; }
+      .hero-content { text-align: center; margin: 0 auto; }
     }
     @media (max-width: 576px) {
       .hero h1 { font-size: 1.8rem; }
-      .hero p { font-size: 1rem; }
+      .hero p { font-size: 0.95rem; }
       .hero .btn-hero { padding: 12px 30px; font-size: 1rem; }
       .caracteristicas-grid { grid-template-columns: 1fr; }
       .servicios-grid { grid-template-columns: 1fr; }
@@ -348,7 +365,7 @@
   <!-- WHATSAPP FLOTANTE -->
   <a href="https://wa.me/522224927590?text=Hola%20Veterican%20Movilidad%2C%20necesito%20informaci%C3%B3n%20sobre%20los%20carritos%20para%20mi%20perro." class="whatsapp-float" target="_blank" aria-label="WhatsApp">💬</a>
 
-  <!-- HEADER FIJO -->
+  <!-- HEADER -->
   <header>
     <div class="container header-flex">
       <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/VETERICAN%20MOVILIDAD%202.png" alt="Veterican Movilidad" class="logo-header" />
@@ -361,7 +378,7 @@
     </div>
   </header>
 
-  <!-- HERO PROFESIONAL CON PORTADA -->
+  <!-- HERO -->
   <section class="hero" id="inicio">
     <div class="hero-content">
       <h1>
@@ -405,7 +422,7 @@
     </div>
   </section>
 
-  <!-- GALERÍA (OCULTA) -->
+  <!-- GALERÍA -->
   <section class="galeria-section" id="galeria">
     <div class="container">
       <h2><span>Nuestros pacientes felices</span></h2>
@@ -467,7 +484,7 @@
     </div>
   </footer>
 
-  <!-- JAVASCRIPT PARA GALERÍA -->
+  <!-- JAVASCRIPT -->
   <script>
     function mostrarGaleria(event) {
       event.preventDefault();
