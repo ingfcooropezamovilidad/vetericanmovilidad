@@ -1,159 +1,485 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Veterican Movilidad</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veterican Movilidad · Calidad de vida para tu mejor amigo</title>
+  <!-- Fuente profesional -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+  <style>
+    /* ---------- RESET Y BASE ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fafafa;
+      color: #1e1e2a;
+      line-height: 1.6;
+    }
 
-body{
-font-family: Arial, sans-serif;
-margin:0;
-padding:0;
-background:#f4f7f9;
-color:#333;
-}
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-header{
-background:#0f766e;
-color:white;
-text-align:center;
-padding:40px 20px;
-}
+    /* ---------- BOTÓN WHATSAPP FLOTANTE ---------- */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #25D366;
+      color: white;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+      text-decoration: none;
+      transition: transform 0.2s ease;
+      z-index: 999;
+      border: none;
+    }
 
-header h1{
-margin:0;
-font-size:42px;
-}
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+      background: #1ebe5a;
+    }
 
-header p{
-font-size:20px;
-}
+    /* ---------- HEADER ---------- */
+    header {
+      background: linear-gradient(135deg, #0b2b4a 0%, #1a4b6d 100%);
+      color: white;
+      padding: 40px 0 50px;
+      text-align: center;
+      border-bottom: 6px solid #fbbf24;
+    }
 
-section{
-padding:30px;
-max-width:1000px;
-margin:auto;
-}
+    .logo-header {
+      max-width: 220px;
+      width: 100%;
+      height: auto;
+      margin-bottom: 16px;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.25));
+    }
 
-h2{
-color:#0f766e;
-}
+    header h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
 
-.boton{
-display:inline-block;
-background:#25D366;
-color:white;
-padding:15px 25px;
-text-decoration:none;
-border-radius:8px;
-font-weight:bold;
-margin-top:15px;
-}
+    header .tagline {
+      font-size: 1.3rem;
+      font-weight: 500;
+      opacity: 0.9;
+      background: rgba(255,255,255,0.12);
+      display: inline-block;
+      padding: 6px 28px;
+      border-radius: 40px;
+      backdrop-filter: blur(2px);
+      margin-top: 8px;
+    }
 
-.tarjeta{
-background:white;
-padding:20px;
-margin:15px 0;
-border-radius:10px;
-box-shadow:0 2px 8px rgba(0,0,0,.1);
-}
+    .btn-whatsapp-header {
+      display: inline-block;
+      margin-top: 24px;
+      background: #25D366;
+      color: white;
+      font-weight: 600;
+      padding: 14px 42px;
+      border-radius: 60px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      letter-spacing: 0.3px;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+      transition: background 0.2s, transform 0.15s;
+    }
 
-ul{
-line-height:1.8;
-}
+    .btn-whatsapp-header:hover {
+      background: #1ebe5a;
+      transform: translateY(-3px);
+    }
 
-footer{
-background:#0f766e;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:30px;
-}
+    /* ---------- SECCIONES ---------- */
+    section {
+      padding: 60px 0;
+      border-bottom: 1px solid #e9edf2;
+    }
 
-</style>
+    section:last-of-type {
+      border-bottom: none;
+    }
 
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    h2 span {
+      background: linear-gradient(135deg, #0b2b4a, #1a4b6d);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ---------- SERVICIOS ---------- */
+    .servicios-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 30px;
+      text-align: center;
+    }
+
+    .servicio-card {
+      background: white;
+      padding: 28px 16px 24px;
+      border-radius: 24px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.04);
+      transition: box-shadow 0.25s, transform 0.2s;
+      border: 1px solid #f0f3f7;
+    }
+
+    .servicio-card:hover {
+      box-shadow: 0 12px 32px rgba(0,0,0,0.07);
+      transform: translateY(-4px);
+    }
+
+    .servicio-icon {
+      font-size: 3.4rem;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .servicio-card h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .servicio-card p {
+      color: #4a5568;
+      font-size: 0.95rem;
+    }
+
+    /* ---------- GALERÍA ---------- */
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .galeria-grid img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+      transition: transform 0.25s, box-shadow 0.25s;
+      background: #eef2f6;
+      border: 1px solid #e2e8f0;
+    }
+
+    .galeria-grid img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+    }
+
+    .galeria-nota {
+      text-align: center;
+      margin-top: 24px;
+      font-size: 0.95rem;
+      color: #4a5568;
+      background: #f0f4fa;
+      padding: 12px 20px;
+      border-radius: 60px;
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto;
+      width: auto;
+    }
+
+    /* ---------- CÓMO TRABAJAMOS ---------- */
+    .pasos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
+      text-align: center;
+    }
+
+    .paso {
+      background: white;
+      padding: 24px 12px;
+      border-radius: 20px;
+      border: 1px solid #eef2f6;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+
+    .paso-num {
+      display: inline-block;
+      background: #0b2b4a;
+      color: white;
+      font-weight: 700;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .paso h4 {
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+
+    /* ---------- CONTACTO ---------- */
+    .contacto-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px 60px;
+      background: white;
+      padding: 32px 40px;
+      border-radius: 32px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.04);
+      border: 1px solid #edf2f7;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .contacto-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 1.1rem;
+    }
+
+    .contacto-item .icon {
+      font-size: 2rem;
+    }
+
+    .contacto-item a {
+      color: #1a4b6d;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contacto-item a:hover {
+      text-decoration: underline;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: #0b2b4a;
+      color: rgba(255,255,255,0.7);
+      text-align: center;
+      padding: 28px 20px;
+      font-size: 0.95rem;
+      border-top: 4px solid #fbbf24;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 700px) {
+      header h1 {
+        font-size: 1.7rem;
+      }
+      header .tagline {
+        font-size: 1rem;
+        padding: 4px 16px;
+      }
+      .contacto-info {
+        flex-direction: column;
+        align-items: center;
+        padding: 24px;
+        gap: 20px;
+      }
+      .galeria-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      }
+      .galeria-grid img {
+        height: 160px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-header {
+        max-width: 160px;
+      }
+      .btn-whatsapp-header {
+        padding: 12px 28px;
+        font-size: 1rem;
+      }
+      .servicios-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .pasos {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
+  <!-- BOTÓN WHATSAPP FLOTANTE -->
+  <a href="https://wa.me/522224927590?text=Hola%20Veterican%20Movilidad%2C%20necesito%20informaci%C3%B3n%20sobre%20los%20carritos%20para%20mi%20perro." 
+     class="whatsapp-float" 
+     target="_blank" 
+     aria-label="WhatsApp">
+    💬
+  </a>
 
-<h1>Veterican Movilidad</h1>
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <img 
+        src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/VETERICAN%20MOVILIDAD%202.png" 
+        alt="Veterican Movilidad - Logo" 
+        class="logo-header" 
+      />
+      <h1>Veterican Movilidad</h1>
+      <div class="tagline">🐶 Devolvemos movilidad y calidad de vida a tu mejor amigo</div>
+      <a href="https://wa.me/522224927590?text=Hola%20Veterican%20Movilidad%2C%20necesito%20informaci%C3%B3n%20sobre%20los%20carritos%20para%20mi%20perro." 
+         class="btn-whatsapp-header" 
+         target="_blank">
+        📲 Contáctanos por WhatsApp
+      </a>
+    </div>
+  </header>
 
-<p>Carritos ortopédicos hechos a la medida para perros</p>
+  <!-- SERVICIOS -->
+  <section>
+    <div class="container">
+      <h2><span>Nuestros servicios</span></h2>
+      <div class="servicios-grid">
+        <div class="servicio-card">
+          <span class="servicio-icon">🦽</span>
+          <h3>Carritos para patas traseras</h3>
+          <p>Ideal para perros con debilidad o parálisis en sus extremidades posteriores.</p>
+        </div>
+        <div class="servicio-card">
+          <span class="servicio-icon">🐕</span>
+          <h3>Carritos de cuatro ruedas</h3>
+          <p>Para perros que necesitan soporte total o tienen problemas en las cuatro patas.</p>
+        </div>
+        <div class="servicio-card">
+          <span class="servicio-icon">📏</span>
+          <h3>Medidas personalizadas</h3>
+          <p>Cada perro es único, por eso fabricamos a la medida de su cuerpo y necesidades.</p>
+        </div>
+        <div class="servicio-card">
+          <span class="servicio-icon">🚚</span>
+          <h3>Envíos a toda la República</h3>
+          <p>Entregamos en todo México con total seguridad y seguimiento.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<a class="boton" href="https://wa.me/522224927590">
-Solicitar Cotización por WhatsApp
-</a>
+  <!-- GALERÍA -->
+  <section style="background: #f7faff;">
+    <div class="container">
+      <h2><span>Nuestros pacientes felices</span></h2>
+      <div class="galeria-grid">
+        <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/20260516_201814.jpg" alt="Paciente 1" loading="lazy" />
+        <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/Screenshot_20220413-155238_Photos.jpg" alt="Paciente 2" loading="lazy" />
+        <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/WhatsApp%20Image%202026-04-29%20at%2012.06.30%20PM%20(2).jpeg" alt="Paciente 3" loading="lazy" />
+        <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/WhatsApp%20Image%202026-04-29%20at%2012.06.30%20PM%20(3).jpeg" alt="Paciente 4" loading="lazy" />
+        <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/WhatsApp%20Image%202026-04-29%20at%2012.06.30%20PM%20(4).jpeg" alt="Paciente 5" loading="lazy" />
+        <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/WhatsApp%20Image%202026-06-16%20at%203.13.39%20PM%20(2).jpeg" alt="Paciente 6" loading="lazy" />
+      </div>
+      <div style="text-align: center;">
+        <span class="galeria-nota">📸 Cada foto es un paciente que recuperó su movilidad</span>
+      </div>
+    </div>
+  </section>
 
-</header>
+  <!-- CÓMO TRABAJAMOS -->
+  <section>
+    <div class="container">
+      <h2><span>¿Cómo trabajamos?</span></h2>
+      <div class="pasos">
+        <div class="paso">
+          <div class="paso-num">1</div>
+          <h4>Contacto por WhatsApp</h4>
+          <p>Hablamos para conocer la situación de tu perro.</p>
+        </div>
+        <div class="paso">
+          <div class="paso-num">2</div>
+          <h4>Toma de medidas</h4>
+          <p>Te guiamos para tomar las medidas exactas.</p>
+        </div>
+        <div class="paso">
+          <div class="paso-num">3</div>
+          <h4>Fabricación</h4>
+          <p>Construimos el carrito a la medida en 5‑7 días.</p>
+        </div>
+        <div class="paso">
+          <div class="paso-num">4</div>
+          <h4>Ajustes finales</h4>
+          <p>Te enviamos vídeos para ajustar tallas si es necesario.</p>
+        </div>
+        <div class="paso">
+          <div class="paso-num">5</div>
+          <h4>Entrega</h4>
+          <p>Recibes el carrito en la puerta de tu casa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section>
+  <!-- CONTACTO -->
+  <section style="background: #f7faff;">
+    <div class="container">
+      <h2><span>Contáctanos</span></h2>
+      <div class="contacto-info">
+        <div class="contacto-item">
+          <span class="icon">📱</span>
+          <a href="tel:+522224927590">222 492 7590</a>
+        </div>
+        <div class="contacto-item">
+          <span class="icon">✉️</span>
+          <a href="mailto:ing.fcooropeza@gmail.com">ing.fcooropeza@gmail.com</a>
+        </div>
+        <div class="contacto-item">
+          <span class="icon">📍</span>
+          <span>Puebla, México</span>
+        </div>
+        <div class="contacto-item">
+          <span class="icon">💬</span>
+          <a href="https://wa.me/522224927590?text=Hola%20Veterican%20Movilidad%2C%20necesito%20informaci%C3%B3n%20sobre%20los%20carritos%20para%20mi%20perro." target="_blank">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div class="tarjeta">
-
-<h2>¿Quiénes Somos?</h2>
-
-<p>
-Fabricamos carritos ortopédicos personalizados para perros con problemas de movilidad.
-Cada carrito se diseña y ajusta de acuerdo con las necesidades específicas de cada paciente.
-</p>
-
-</div>
-
-<div class="tarjeta">
-
-<h2>Nuestros Servicios</h2>
-
-<ul>
-<li>Carritos para patas traseras.</li>
-<li>Carritos de cuatro ruedas.</li>
-<li>Toma de medidas personalizada.</li>
-<li>Ajustes posteriores sin costo adicional.</li>
-<li>Asesoría profesional.</li>
-<li>Envíos a toda la República Mexicana.</li>
-</ul>
-
-</div>
-
-<div class="tarjeta">
-
-<h2>Precios Aproximados</h2>
-
-<ul>
-<li>Chico: $1,500 a $2,000 MXN</li>
-<li>Mediano: $2,000 a $2,500 MXN</li>
-<li>Grande: $2,500 a $3,500 MXN</li>
-<li>Jumbo: $3,500 a $4,500 MXN</li>
-</ul>
-
-<p>
-Los precios pueden variar dependiendo de las necesidades específicas de cada paciente.
-</p>
-
-</div>
-
-<div class="tarjeta">
-
-<h2>Contacto</h2>
-
-<p><strong>WhatsApp:</strong> 222 492 7590</p>
-
-<p><strong>Correo:</strong> ing.fcooropeza@gmail.com</p>
-
-<p><strong>Ubicación:</strong> Puebla, México</p>
-
-</div>
-
-</section>
-
-<footer>
-
-<p>Veterican Movilidad © 2026</p>
-
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>
+        <strong>Veterican Movilidad</strong> · Devolvemos movilidad y calidad de vida a tu mejor amigo 🐶🦽<br />
+        &copy; 2026 · Hecho con ❤️ en Puebla, México
+      </p>
+    </div>
+  </footer>
 
 </body>
 </html>
