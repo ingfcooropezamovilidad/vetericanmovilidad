@@ -1,14 +1,28 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-MX">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Veterican Movilidad · Calidad de vida para tu mejor amigo</title>
+  <title>Veterican Movilidad · Carritos ortopédicos para perros en Puebla</title>
+  <meta name="description" content="Carritos ortopédicos personalizados para perros con problemas de movilidad. Fabricamos a la medida en Puebla y enviamos a toda la República Mexicana. ¡Recupera la movilidad de tu mejor amigo!" />
+  <meta name="keywords" content="carritos para perros, silla de ruedas para perros, ortopedia canina, movilidad canina, perros con parálisis, carrito ortopédico, veterinaria Puebla" />
+  <meta name="author" content="Veterican Movilidad" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph para redes sociales -->
+  <meta property="og:title" content="Veterican Movilidad · Carritos ortopédicos para perros" />
+  <meta property="og:description" content="Devolvemos movilidad y calidad de vida a tu mejor amigo con carritos a la medida. ¡Cotiza por WhatsApp!" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/20260516_201814.jpg" />
+  <meta property="og:url" content="https://ingfcooropezamovilidad.github.io/vetericanmovilidad/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
+    /* (mismo CSS que antes, sin cambios) */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Inter', sans-serif;
@@ -17,8 +31,6 @@
       line-height: 1.6;
     }
     .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-
-    /* WHATSAPP FLOTANTE */
     .whatsapp-float {
       position: fixed;
       bottom: 30px;
@@ -39,8 +51,6 @@
       border: none;
     }
     .whatsapp-float:hover { transform: scale(1.08); background: #1ebe5a; }
-
-    /* HEADER FIJO */
     header {
       background: rgba(27, 77, 62, 0.95);
       padding: 16px 0;
@@ -76,8 +86,6 @@
       margin-left: 20px;
     }
     .nav-links .btn-whatsapp-nav:hover { background: #1ebe5a; color: white; }
-
-    /* HERO PROFESIONAL */
     .hero {
       background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
                   url('https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/20260516_201814.jpg') center center/cover no-repeat;
@@ -125,8 +133,6 @@
       box-shadow: 0 12px 40px rgba(37,211,102,0.5);
     }
     .hero .btn-hero i { margin-right: 10px; }
-
-    /* SECCIONES */
     section { padding: 60px 0; border-bottom: 1px solid #d9e8d9; }
     section:last-of-type { border-bottom: none; }
     h2 {
@@ -137,8 +143,6 @@
       color: #1b4d3e;
     }
     h2 span { background: linear-gradient(135deg, #1b4d3e, #2e7d5e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-
-    /* CARACTERÍSTICAS - 3 columnas fijas en escritorio */
     .caracteristicas-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -157,8 +161,6 @@
     .caracteristica i { font-size: 2.8rem; color: #2e7d5e; margin-bottom: 10px; display: block; }
     .caracteristica h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 4px; }
     .caracteristica p { font-size: 0.95rem; color: #3a4a3a; }
-
-    /* SERVICIOS - 4 columnas */
     .servicios-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -177,8 +179,6 @@
     .servicio-icon { font-size: 3.4rem; display: block; margin-bottom: 10px; }
     .servicio-card h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 6px; }
     .servicio-card p { color: #3a4a3a; font-size: 0.95rem; }
-
-    /* GALERÍA - 3 columnas fijas en escritorio (simétrica) */
     .galeria-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -200,8 +200,6 @@
       color: #3a4a3a; background: #e4f0e4; padding: 12px 20px;
       border-radius: 60px; display: inline-block; margin-left: auto; margin-right: auto; width: auto;
     }
-
-    /* PASOS - 5 columnas */
     .pasos {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
@@ -230,8 +228,6 @@
       margin-bottom: 10px;
     }
     .paso h4 { font-weight: 600; font-size: 1.05rem; }
-
-    /* CONTACTO */
     .contacto-info {
       display: flex;
       flex-wrap: wrap;
@@ -249,8 +245,6 @@
     .contacto-item .icon { font-size: 2rem; color: #2e7d5e; }
     .contacto-item a { color: #1b4d3e; text-decoration: none; font-weight: 500; }
     .contacto-item a:hover { text-decoration: underline; }
-
-    /* FOOTER */
     footer {
       background: #1b4d3e;
       color: rgba(255,255,255,0.8);
@@ -265,8 +259,6 @@
     .horario { margin-top: 12px; font-size: 0.95rem; }
     .horario span { font-weight: 500; color: white; }
     .footer-copy { margin-top: 12px; font-size: 0.9rem; opacity: 0.7; }
-
-    /* RESPONSIVE */
     @media (max-width: 992px) {
       .caracteristicas-grid { grid-template-columns: repeat(2, 1fr); }
       .servicios-grid { grid-template-columns: repeat(2, 1fr); }
@@ -302,7 +294,7 @@
   <!-- HEADER FIJO -->
   <header>
     <div class="container header-flex">
-      <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/VETERICAN%20MOVILIDAD%202.png" alt="Veterican Movilidad" class="logo-header" />
+      <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/VETERICAN%20MOVILIDAD%202.png" alt="Veterican Movilidad - Carritos ortopédicos para perros" class="logo-header" />
       <div class="nav-links">
         <a href="#servicios">Servicios</a>
         <a href="#galeria">Galería</a>
@@ -322,6 +314,11 @@
         a tu mejor amigo
       </h1>
       <p>Carritos ortopédicos personalizados hechos a la medida para perros con problemas de movilidad.</p>
+      <!-- Texto extra para SEO (visible pero con palabras clave) -->
+      <p style="font-size: 1.1rem; margin-bottom: 30px; opacity: 0.9;">
+        En <strong>Veterican Movilidad</strong> fabricamos <strong>sillas de ruedas para perros</strong> con parálisis, debilidad en patas traseras o problemas de cadera. 
+        Atendemos en <strong>Puebla</strong> y hacemos envíos a toda <strong>República Mexicana</strong>.
+      </p>
       <a href="https://wa.me/522224927590?text=Hola%20Veterican%20Movilidad%2C%20necesito%20informaci%C3%B3n%20sobre%20los%20carritos%20para%20mi%20perro." target="_blank" class="btn-hero">
         <i class="fab fa-whatsapp"></i> Solicitar Cotización por WhatsApp
       </a>
@@ -356,17 +353,17 @@
     </div>
   </section>
 
-  <!-- GALERÍA (6 fotos en 3 columnas = simétrico) -->
+  <!-- GALERÍA (6 fotos en 3 columnas) -->
   <section style="background: #f7fbf7;" id="galeria">
     <div class="container">
       <h2><span>Nuestros pacientes felices</span></h2>
       <div class="galeria-grid">
-        <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/20260516_201814.jpg" alt="Paciente 1" loading="lazy" />
-        <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/Screenshot_20220413-155238_Photos.jpg" alt="Paciente 2" loading="lazy" />
-        <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/WhatsApp%20Image%202026-04-29%20at%2012.06.30%20PM%20(2).jpeg" alt="Paciente 3" loading="lazy" />
-        <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/WhatsApp%20Image%202026-04-29%20at%2012.06.30%20PM%20(3).jpeg" alt="Paciente 4" loading="lazy" />
-        <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/WhatsApp%20Image%202026-04-29%20at%2012.06.30%20PM%20(4).jpeg" alt="Paciente 5" loading="lazy" />
-        <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/WhatsApp%20Image%202026-06-16%20at%203.13.39%20PM%20(2).jpeg" alt="Paciente 6" loading="lazy" />
+        <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/20260516_201814.jpg" alt="Perro con carrito ortopédico - Paciente 1" loading="lazy" />
+        <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/Screenshot_20220413-155238_Photos.jpg" alt="Perro con silla de ruedas - Paciente 2" loading="lazy" />
+        <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/WhatsApp%20Image%202026-04-29%20at%2012.06.30%20PM%20(2).jpeg" alt="Carrito para perro - Paciente 3" loading="lazy" />
+        <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/WhatsApp%20Image%202026-04-29%20at%2012.06.30%20PM%20(3).jpeg" alt="Perro con movilidad asistida - Paciente 4" loading="lazy" />
+        <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/WhatsApp%20Image%202026-04-29%20at%2012.06.30%20PM%20(4).jpeg" alt="Silla ortopédica para perro - Paciente 5" loading="lazy" />
+        <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/WhatsApp%20Image%202026-06-16%20at%203.13.39%20PM%20(2).jpeg" alt="Perro recuperando movilidad - Paciente 6" loading="lazy" />
       </div>
       <div style="text-align: center;"><span class="galeria-nota">📸 Cada foto es un paciente que recuperó su movilidad</span></div>
     </div>
