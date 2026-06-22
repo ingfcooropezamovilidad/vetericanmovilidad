@@ -1,20 +1,19 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es-MX">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Veterican Movilidad · Carritos ortopédicos para perros en Puebla</title>
-  <meta name="description" content="Carritos ortopédicos personalizados para perros con problemas de movilidad. Fabricamos a la medida en Puebla y enviamos a toda la República Mexicana. ¡Recupera la movilidad de tu mejor amigo!" />
-  <meta name="keywords" content="carritos para perros, silla de ruedas para perros, ortopedia canina, movilidad canina, perros con parálisis, carrito ortopédico, veterinaria Puebla" />
+  <meta name="description" content="Carritos ortopédicos personalizados para perros con problemas de movilidad. Fabricamos a la medida en Puebla y enviamos a toda la República Mexicana." />
+  <meta name="keywords" content="carritos para perros, silla de ruedas para perros, ortopedia canina, movilidad canina" />
   <meta name="author" content="Veterican Movilidad" />
   <meta name="robots" content="index, follow" />
   <!-- Open Graph -->
   <meta property="og:title" content="Veterican Movilidad · Carritos ortopédicos para perros" />
-  <meta property="og:description" content="Devolvemos movilidad y calidad de vida a tu mejor amigo con carritos a la medida. ¡Cotiza por WhatsApp!" />
-  <meta property="og:image" content="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/20260516_201814.jpg" />
+  <meta property="og:description" content="Devolvemos movilidad y calidad de vida a tu mejor amigo con carritos a la medida." />
+  <meta property="og:image" content="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/Screenshot_20220413-155238_Photos.jpg" />
   <meta property="og:url" content="https://ingfcooropezamovilidad.github.io/vetericanmovilidad/" />
   <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,7 +24,7 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Inter', sans-serif;
-      background: #f0f7f0;
+      background: #ffffff; /* Fondo blanco */
       color: #1e2a1e;
       line-height: 1.6;
     }
@@ -55,13 +54,13 @@
 
     /* ===== HEADER FIJO ===== */
     header {
-      background: rgba(27, 77, 62, 0.95);
-      padding: 16px 0;
+      background: rgba(255, 255, 255, 0.92); /* Fondo blanco semi-transparente */
+      backdrop-filter: blur(6px);
+      padding: 12px 0;
       position: sticky;
       top: 0;
       z-index: 100;
-      backdrop-filter: blur(8px);
-      border-bottom: 2px solid #a8d5ba;
+      border-bottom: 1px solid #e0ebe0;
     }
     .header-flex {
       display: flex;
@@ -70,9 +69,12 @@
       flex-wrap: wrap;
       gap: 15px;
     }
-    .logo-header { max-height: 50px; width: auto; }
+    .logo-header {
+      max-height: 45px;
+      width: auto;
+    }
     .nav-links a {
-      color: rgba(255,255,255,0.85);
+      color: #1b4d3e;
       text-decoration: none;
       margin-left: 24px;
       font-weight: 500;
@@ -80,7 +82,7 @@
       transition: color 0.2s;
       cursor: pointer;
     }
-    .nav-links a:hover { color: #a8d5ba; }
+    .nav-links a:hover { color: #2e7d5e; }
     .nav-links .btn-whatsapp-nav {
       background: #25D366;
       padding: 8px 20px;
@@ -93,8 +95,8 @@
 
     /* ===== HERO PROFESIONAL ===== */
     .hero {
-      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-                  url('https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/20260516_201814.jpg') center center/cover no-repeat;
+      background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), /* overlay más suave */
+                  url('https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/Screenshot_20220413-155238_Photos.jpg') center center/cover no-repeat;
       min-height: 85vh;
       display: flex;
       align-items: center;
@@ -110,6 +112,7 @@
       line-height: 1.1;
       letter-spacing: -1px;
       margin-bottom: 16px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.3);
     }
     .hero h1 .destacar { color: #a8d5ba; }
     .hero p {
@@ -120,6 +123,7 @@
       max-width: 650px;
       margin-left: auto;
       margin-right: auto;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
     .hero .btn-hero {
       display: inline-block;
@@ -141,7 +145,11 @@
     .hero .btn-hero i { margin-right: 10px; }
 
     /* ===== SECCIONES GENERALES ===== */
-    section { padding: 60px 0; border-bottom: 1px solid #d9e8d9; }
+    section {
+      padding: 60px 0;
+      border-bottom: 1px solid #e6f0e6;
+      background: white;
+    }
     section:last-of-type { border-bottom: none; }
     h2 {
       font-size: 2.2rem;
@@ -160,11 +168,11 @@
       text-align: center;
     }
     .caracteristica {
-      background: white;
+      background: #f9fcf9;
       padding: 24px 12px;
       border-radius: 20px;
       box-shadow: 0 4px 16px rgba(0,0,0,0.04);
-      border: 1px solid #cfe3cf;
+      border: 1px solid #e0ebe0;
       transition: transform 0.2s;
     }
     .caracteristica:hover { transform: translateY(-4px); }
@@ -180,11 +188,11 @@
       text-align: center;
     }
     .servicio-card {
-      background: white;
+      background: #f9fcf9;
       padding: 28px 16px 24px;
       border-radius: 24px;
       box-shadow: 0 6px 24px rgba(0,0,0,0.04);
-      border: 1px solid #cfe3cf;
+      border: 1px solid #e0ebe0;
       transition: box-shadow 0.25s, transform 0.2s;
     }
     .servicio-card:hover { box-shadow: 0 12px 32px rgba(0,0,0,0.07); transform: translateY(-4px); }
@@ -194,13 +202,13 @@
 
     /* ===== GALERÍA (oculta por defecto) ===== */
     .galeria-section {
-      display: none; /* OCULTA INICIALMENTE */
-      background: #f7fbf7;
+      display: none;
+      background: #f9fcf9;
       padding: 60px 0;
-      border-bottom: 1px solid #d9e8d9;
+      border-bottom: 1px solid #e6f0e6;
     }
     .galeria-section.visible {
-      display: block; /* SE MUESTRA CON LA CLASE 'visible' */
+      display: block;
       animation: fadeIn 0.5s ease;
     }
     @keyframes fadeIn {
@@ -220,7 +228,7 @@
       box-shadow: 0 4px 16px rgba(0,0,0,0.06);
       transition: transform 0.25s, box-shadow 0.25s;
       background: #e4f0e4;
-      border: 1px solid #bdd6bd;
+      border: 1px solid #d0e0d0;
     }
     .galeria-grid img:hover { transform: scale(1.02); box-shadow: 0 10px 30px rgba(0,0,0,0.10); }
     .galeria-nota {
@@ -250,10 +258,10 @@
       text-align: center;
     }
     .paso {
-      background: white;
+      background: #f9fcf9;
       padding: 24px 12px;
       border-radius: 20px;
-      border: 1px solid #cfe3cf;
+      border: 1px solid #e0ebe0;
       box-shadow: 0 4px 12px rgba(0,0,0,0.02);
       transition: transform 0.2s;
     }
@@ -278,11 +286,11 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 30px 50px;
-      background: white;
+      background: #f9fcf9;
       padding: 32px 40px;
       border-radius: 32px;
       box-shadow: 0 6px 24px rgba(0,0,0,0.04);
-      border: 1px solid #cfe3cf;
+      border: 1px solid #e0ebe0;
       max-width: 1000px;
       margin: 0 auto;
     }
@@ -343,10 +351,9 @@
   <!-- HEADER FIJO -->
   <header>
     <div class="container header-flex">
-      <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/VETERICAN%20MOVILIDAD%202.png" alt="Veterican Movilidad - Carritos ortopédicos para perros" class="logo-header" />
+      <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/VETERICAN%20MOVILIDAD%202.png" alt="Veterican Movilidad" class="logo-header" />
       <div class="nav-links">
         <a href="#servicios">Servicios</a>
-        <!-- El enlace de galería ahora llama a una función JavaScript -->
         <a href="#" onclick="mostrarGaleria(event);">Galería</a>
         <a href="#contacto">Contacto</a>
         <a href="https://wa.me/522224927590?text=Hola%20Veterican%20Movilidad%2C%20necesito%20informaci%C3%B3n%20sobre%20los%20carritos%20para%20mi%20perro." target="_blank" class="btn-whatsapp-nav"><i class="fab fa-whatsapp"></i> WhatsApp</a>
@@ -354,7 +361,7 @@
     </div>
   </header>
 
-  <!-- HERO PROFESIONAL -->
+  <!-- HERO PROFESIONAL (con perrito en pasto) -->
   <section class="hero" id="inicio">
     <div class="hero-content">
       <h1>
@@ -364,10 +371,6 @@
         a tu mejor amigo
       </h1>
       <p>Carritos ortopédicos personalizados hechos a la medida para perros con problemas de movilidad.</p>
-      <p style="font-size: 1.1rem; margin-bottom: 30px; opacity: 0.9;">
-        En <strong>Veterican Movilidad</strong> fabricamos <strong>sillas de ruedas para perros</strong> con parálisis, debilidad en patas traseras o problemas de cadera. 
-        Atendemos en <strong>Puebla</strong> y hacemos envíos a toda <strong>República Mexicana</strong>.
-      </p>
       <a href="https://wa.me/522224927590?text=Hola%20Veterican%20Movilidad%2C%20necesito%20informaci%C3%B3n%20sobre%20los%20carritos%20para%20mi%20perro." target="_blank" class="btn-hero">
         <i class="fab fa-whatsapp"></i> Solicitar Cotización por WhatsApp
       </a>
@@ -375,7 +378,7 @@
   </section>
 
   <!-- CARACTERÍSTICAS -->
-  <section style="background: #f7fbf7;" id="caracteristicas">
+  <section id="caracteristicas">
     <div class="container">
       <h2><span>¿Por qué elegirnos?</span></h2>
       <div class="caracteristicas-grid">
@@ -402,26 +405,22 @@
     </div>
   </section>
 
-  <!-- ===== GALERÍA (OCULTA INICIALMENTE) ===== -->
+  <!-- GALERÍA (OCULTA) -->
   <section class="galeria-section" id="galeria">
     <div class="container">
       <h2><span>Nuestros pacientes felices</span></h2>
       <div class="galeria-grid">
-        <!-- AQUÍ PUEDES AGREGAR TODAS LAS FOTOS QUE QUIERAS -->
-        <!-- Copia esta línea por cada foto nueva y cambia la URL y el alt -->
-        <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/20260516_201814.jpg" alt="Perro con carrito ortopédico - Paciente 1" loading="lazy" />
-        <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/Screenshot_20220413-155238_Photos.jpg" alt="Perro con silla de ruedas - Paciente 2" loading="lazy" />
-        <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/WhatsApp%20Image%202026-04-29%20at%2012.06.30%20PM%20(2).jpeg" alt="Carrito para perro - Paciente 3" loading="lazy" />
-        <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/WhatsApp%20Image%202026-04-29%20at%2012.06.30%20PM%20(3).jpeg" alt="Perro con movilidad asistida - Paciente 4" loading="lazy" />
-        <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/WhatsApp%20Image%202026-04-29%20at%2012.06.30%20PM%20(4).jpeg" alt="Silla ortopédica para perro - Paciente 5" loading="lazy" />
-        <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/WhatsApp%20Image%202026-06-16%20at%203.13.39%20PM%20(2).jpeg" alt="Perro recuperando movilidad - Paciente 6" loading="lazy" />
-        <!-- Puedes agregar más líneas con el mismo formato -->
-        <!-- Ejemplo: <img src="URL_RAW_DE_TU_FOTO_7" alt="Descripción" loading="lazy" /> -->
+        <!-- Puedes agregar más imágenes aquí -->
+        <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/20260516_201814.jpg" alt="Perro con carrito" loading="lazy" />
+        <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/Screenshot_20220413-155238_Photos.jpg" alt="Perro en pasto" loading="lazy" />
+        <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/WhatsApp%20Image%202026-04-29%20at%2012.06.30%20PM%20(2).jpeg" alt="Paciente 3" loading="lazy" />
+        <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/WhatsApp%20Image%202026-04-29%20at%2012.06.30%20PM%20(3).jpeg" alt="Paciente 4" loading="lazy" />
+        <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/WhatsApp%20Image%202026-04-29%20at%2012.06.30%20PM%20(4).jpeg" alt="Paciente 5" loading="lazy" />
+        <img src="https://raw.githubusercontent.com/ingfcooropezamovilidad/vetericanmovilidad/main/WhatsApp%20Image%202026-06-16%20at%203.13.39%20PM%20(2).jpeg" alt="Paciente 6" loading="lazy" />
       </div>
       <div style="text-align: center;">
         <span class="galeria-nota">📸 Cada foto es un paciente que recuperó su movilidad</span>
         <br />
-        <!-- Botón para ocultar la galería -->
         <button class="btn-cerrar-galeria" onclick="ocultarGaleria();">Cerrar galería</button>
       </div>
     </div>
@@ -469,31 +468,23 @@
     </div>
   </footer>
 
-  <!-- ===== JAVASCRIPT PARA MOSTRAR/OCULTAR GALERÍA ===== -->
+  <!-- JAVASCRIPT PARA GALERÍA -->
   <script>
-    // Función para mostrar la galería
     function mostrarGaleria(event) {
-      event.preventDefault(); // Evita que el enlace navegue a #
+      event.preventDefault();
       var galeria = document.getElementById('galeria');
       galeria.classList.add('visible');
-      // Hacer scroll suave hacia la galería
       galeria.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-
-    // Función para ocultar la galería
     function ocultarGaleria() {
       var galeria = document.getElementById('galeria');
       galeria.classList.remove('visible');
-      // Opcional: volver a la parte superior o al inicio
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-
-    // Si la URL tiene #galeria al cargar, mostrar la galería automáticamente
     window.addEventListener('load', function() {
       if (window.location.hash === '#galeria') {
         var galeria = document.getElementById('galeria');
         galeria.classList.add('visible');
-        // Pequeño retraso para que el scroll sea suave
         setTimeout(function() {
           galeria.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 300);
